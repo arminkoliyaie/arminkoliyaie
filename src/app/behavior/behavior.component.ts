@@ -10,6 +10,8 @@ export class BehaviorComponent implements OnInit {
 
   constructor() { }
 
+  //test
+
   ngOnInit(): void {
     const subject = new BehaviorSubject('initial value');
     const observerOne = subject.subscribe(
