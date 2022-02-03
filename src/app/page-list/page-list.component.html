@@ -1,0 +1,21 @@
+
+<table class="table is-striped" *ngIf="posts.length > 0">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>title</th>
+            <th>wordcound</th>
+            <th>sinppet</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of posts;let i=index">
+            <td>{{i+1}}</td>
+            <td>
+                <a [href]="'https://en.wikipedia.org/?curide' + item.pageid" target="_blank">{{item.title}}</a>
+            </td>
+            <td>{{item.wordcount}}</td>
+            <td>[innerHTML]="item.sinppet"></td>
+        </tr>
+    </tbody>
+</table>
